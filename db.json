@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "utente1",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "username": "utente2",
+      "password": "password456"
+    }
+  ],
+  "clienti": [
+    {
+      "codiceFiscale": "DGGSLV12ASOJGA",
+      "nome": "Diego",
+      "cognome": "Salvietta",
+      "dataNascita": "2024-10-02T22:00:00.000Z",
+      "azienda": "Cyborg",
+      "userId": null,
+      "id": "3477"
+    },
+    {
+      "id": "3651",
+      "codiceFiscale": "GRRSCTT29834SAD",
+      "nome": "Gerry",
+      "cognome": "Scotti",
+      "dataNascita": "1962-06-19T23:00:00.000Z",
+      "azienda": "Mediaset",
+      "userId": null
+    },
+    {
+      "codiceFiscale": "SPSAPV90ASADWGC",
+      "nome": "Livio",
+      "cognome": "Bevilacqua",
+      "dataNascita": "2024-10-14T22:00:00.000Z",
+      "azienda": "Rossi",
+      "userId": null,
+      "id": "c59f"
+    }
+  ]
+}
