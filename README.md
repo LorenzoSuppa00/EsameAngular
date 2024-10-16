@@ -1,27 +1,20 @@
-# Test
+# La base del progetto: App Component
+In questo progetto Angular, la base di tutto si trova in **app.component.@**, dove risiede la root, ovvero ciò che rende possibile far partire il progetto;
+(per app.component.@ si intendono i vari app.component.hmtl, .ts, .css, .spec.ts). 
+Oltre a questo è il contenitore di tutti gli altri componenti di cui si parlerà fra poco.
+Il file **index.html**, è invece il file che viene effettivamente caricato sul browser, ed anche in esso è presente la root del progetto.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+## App Module
+Qui vengono importati sia i componenti all'interno di App Component che altri componenti di Angular.
 
-## Development server
+## Gestione accesso: Login Component
+In questo componente viene gestito l'accesso alla tabella dei clienti, tramite la gestione di username e password. 
+La parte focale del codice è situata nel metodo **onSubmit()**, che permette al click sul tasto invio di accedere al metodo getClient presente nella component clienti.
+Questo è possibile poichè all'interno di login.component.ts, vi è una Injection di Auth Service ed un utilizzo del metodo authenticate(), per autenticare l'accesso a clienti.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## La tabella dei clienti: Clienti Component
+Con l'accesso al metodo **getClient()** grazie all'onSubmit() di LoginComponent, possiamo ottenere la lista dei clienti, che si trovano all'interno del file **db.json**.
+Il metodo **ngOnInit()** viene eseguito quando il componente viene caricato per la prima volta, **onEdit()** permette di modificare ogni cliente, **onDelete()** di eliminarli, **mostra()** a rendere visibile il form di modifica/aggiunta di ogni cliente; **onSubmit()** di ClientiComponent, serve per l'invio del form.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

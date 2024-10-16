@@ -3,21 +3,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Client, ClientService } from '../client.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-// export interface Customer {
-//   id: number;
-//   codiceFiscale: string;
-//   nome: string;
-//   cognome: string;
-//   dataNascita: Date;
-//   azienda: string;
-// }
-
-// const ELEMENT_DATA: Customer[] = [
-//   {id:1, codiceFiscale: 'XYZ123ABC456', nome: 'Mario', cognome: 'Rossi', dataNascita: new Date(), azienda: 'Acme'},
-//   // ... altri clienti
-// ];
-
-
 @Component({
   selector: 'app-clienti',
   templateUrl: './clienti.component.html',

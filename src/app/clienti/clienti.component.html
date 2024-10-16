@@ -1,4 +1,5 @@
-<table mat-table [dataSource]="customers">
+<div class="table-container">
+  <table mat-table [dataSource]="customers">
 
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> id </th>
@@ -63,21 +64,21 @@
           <label for="codiceFiscale">Codice fiscale:</label>
           <input id="codiceFiscale" formControlName="codiceFiscale">
           <div *ngIf="userForm.get('codiceFiscale')?.invalid && userForm.get('codiceFiscale')?.touched">
-              Codice fiscale obbligatorio.
+              Codice fiscale obbligatorio
           </div>
       </div>
       <div>
           <label for="nome">Nome:</label>
           <input id="nome" formControlName="nome">
           <div *ngIf="userForm.get('nome')?.invalid && userForm.get('nome')?.touched">
-              Nome non valido.
+              Errore
           </div>
       </div>
       <div>
         <label for="cognome">Cognome:</label>
         <input id="cognome" formControlName="cognome">
         <div *ngIf="userForm.get('cognome')?.invalid && userForm.get('cognome')?.touched">
-            Cognome non valido.
+            Errore
         </div>
       </div>
       <div>
@@ -93,11 +94,11 @@
         <label for="azienda">Azienda:</label>
         <input id="azienda" formControlName="azienda">
         <div *ngIf="userForm.get('azienda')?.invalid && userForm.get('azienda')?.touched">
-            Azienda non valida.
+            Errore
         </div>
       </div>
       <button type="submit">Invia</button>
     </form>
 
-  </div>
-    
+  </div> 
+</div>
